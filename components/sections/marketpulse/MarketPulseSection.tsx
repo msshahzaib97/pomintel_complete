@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import SectionWrapper from '../../layout/SectionWrapper';
 import ArticleCard from './ArticleCard';
@@ -21,8 +20,8 @@ const MarketPulseSection: React.FC = () => {
       options={ALL_COUNTRIES_OPTIONS}
       selectedValue={countryFilter}
       onSelect={(value) => setCountryFilter(value as string)}
-      // label="Filter by Country:" // Label removed as per request
-      buttonClassName="py-1 px-2 text-sm" // Adjusted for potentially smaller inline appearance
+      className="w-full md:w-auto"
+      buttonClassName="w-full md:w-auto py-1 px-2 text-sm"
     />
   );
 
@@ -32,7 +31,7 @@ const MarketPulseSection: React.FC = () => {
       title="Market Pulse"
       tooltipText="Latest news and analysis on the pomegranate market."
       headerContent={countryFilterDropdown}
-      inlineHeaderContentMobile={true} // Ensures dropdown is next to title on mobile
+      inlineHeaderContentMobile={false}
     >
       {/* Desktop: Grid */}
       <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
