@@ -5,9 +5,10 @@ interface TooltipProps {
   content: string;
   children?: ReactNode;
   className?: string;
+  position?: 'top' | 'bottom';
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ content, children, className }: TooltipProps) => {
+const Tooltip: React.FC<TooltipProps> = ({ content, children, className, position = 'bottom' }: TooltipProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
@@ -17,7 +18,7 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children, className }: Toolt
   };
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: Event) => {
       if (tooltipRef.current && !tooltipRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -49,14 +50,27 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children, className }: Toolt
         {trigger}
       </button>
       {isOpen && (
-        <div
-          className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max max-w-xs px-3 py-2 bg-gray-800 text-white text-xs rounded-md shadow-lg z-20"
-          role="tooltip"
-        >
-          {content}
-          {/* Arrow */}
-          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-gray-800"></div>
-        </div>
+        position === 'top' ? (
+          <div
+            className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max max-w-xs max-w-[90vw] sm:max-w-xs px-3 py-2 bg-gray-800 text-white text-xs rounded-md shadow-lg z-20"
+            style={{ minWidth: '120px', maxWidth: '90vw' }}
+            role="tooltip"
+          >
+            {content}
+            {/* Arrow */}
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-gray-800"></div>
+          </div>
+        ) : (
+          <div
+            className="absolute top-full left-0 right-0 mx-auto mt-2 w-max max-w-xs max-w-[90vw] sm:max-w-xs px-3 py-2 bg-gray-800 text-white text-xs rounded-md shadow-lg z-20"
+            style={{ minWidth: '120px', maxWidth: '90vw' }}
+            role="tooltip"
+          >
+            {content}
+            {/* Arrow */}
+            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-b-4 border-b-gray-800"></div>
+          </div>
+        )
       )}
     </div>
   );

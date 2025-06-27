@@ -95,9 +95,6 @@ const TradePerformanceTable: React.FC = () => {
     <div className="mt-8 bg-white p-6 rounded-lg shadow-lg border border-gray-200">
       <div className="flex items-center mb-4">
         <h3 className="text-xl font-semibold text-gray-800">Trade Performance</h3>
-        <div className="ml-2">
-            <Tooltip content="Detailed trade performance metrics by country. Data is speculative, based on public sources, and updates periodically." className="w-4 h-4" />
-        </div>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
@@ -112,7 +109,6 @@ const TradePerformanceTable: React.FC = () => {
                 >
                   <div className="flex items-center">
                     {col.label}
-                    {col.sortable && <div className='ml-1 flex items-center'><Tooltip content={columnTooltips[col.key]} className="w-4 h-4" /></div>}
                     {col.sortable && getSortIcon(col.key)}
                   </div>
                 </th>

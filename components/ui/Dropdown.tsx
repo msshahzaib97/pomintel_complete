@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDownIcon } from '../IconComponents';
 import { DropdownOption } from '../../types';
@@ -45,7 +44,7 @@ const Dropdown = <T extends string | number,>({
       <div>
         <button
           type="button"
-          className={`inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500 ${buttonClassName}`}
+          className={`inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:border-gray-400 focus:bg-gray-100 transition-all duration-150 ${buttonClassName}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {selectedOption?.label || 'Select...'}
@@ -54,13 +53,13 @@ const Dropdown = <T extends string | number,>({
       </div>
 
       {isOpen && (
-        <div className={`origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 ${menuClassName}`}>
+        <div className={`origin-top-right absolute right-0 mt-2 w-56 rounded-lg shadow-lg bg-white border border-gray-200 z-50 ${menuClassName}`}>
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {options.map((option) => (
               <a
                 href="#"
                 key={option.value.toString()}
-                className={`block px-4 py-2 text-sm ${option.value === selectedValue ? 'bg-black text-white' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'}`}
+                className={`block px-4 py-2 text-sm rounded transition-all duration-100 ${option.value === selectedValue ? 'bg-gray-100 text-gray-900 font-semibold' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'}`}
                 onClick={(e) => {
                   e.preventDefault();
                   onSelect(option.value);

@@ -118,26 +118,24 @@ const TradeDataSection: React.FC = () => {
             />
         </div>
         <div className="flex justify-center mb-4">
-            <div className="w-full flex justify-start">
-                <Dropdown
-                    options={TIME_RANGE_OPTIONS}
-                    selectedValue={timeRange}
-                    onSelect={(value) => setTimeRange(value as string)}
-                    className="max-w-xs"
-                    buttonClassName="w-full"
-                />
-            </div>
+            <Dropdown
+                options={TIME_RANGE_OPTIONS}
+                selectedValue={timeRange}
+                onSelect={(value) => setTimeRange(value as string)}
+                className="w-full max-w-xs"
+                buttonClassName="w-full"
+            />
         </div>
         <div className="flex justify-center space-x-3">
         <button 
             onClick={toggleImport}
-            className={`flex items-center px-4 py-2 rounded-md text-sm font-medium transition-colors ${showImport ? 'bg-red-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-red-400 hover:text-white'}`}
+            className={`flex items-center justify-center w-full max-w-xs px-4 py-2 rounded-md text-sm font-medium transition-colors ${showImport ? 'bg-red-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-red-400 hover:text-white'}`}
         >
             <DotIcon className="w-2 h-2 mr-2"/> Import
         </button>
         <button 
             onClick={toggleExport}
-            className={`flex items-center px-4 py-2 rounded-md text-sm font-medium transition-colors ${showExport ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-green-400 hover:text-white'}`}
+            className={`flex items-center justify-center w-full max-w-xs px-4 py-2 rounded-md text-sm font-medium transition-colors ${showExport ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-green-400 hover:text-white'}`}
         >
             <DotIcon className="w-2 h-2 mr-2"/> Export
         </button>

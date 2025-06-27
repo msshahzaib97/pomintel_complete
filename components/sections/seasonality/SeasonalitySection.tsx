@@ -52,6 +52,8 @@ const SeasonalitySection: React.FC = () => {
           selectedValue={selectedCountry}
           onSelect={(value) => setSelectedCountry(value as string)}
           label="Country:"
+          className="w-full md:w-auto"
+          buttonClassName="w-full md:w-auto"
         />
       }
     >

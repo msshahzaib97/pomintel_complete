@@ -29,13 +29,14 @@ const OverviewSection: React.FC = () => {
             selectedValue={timeRange}
             onSelect={(value) => setTimeRange(value as string)}
             label="Time Range:"
-            className="w-32"
+            className="w-full md:w-auto"
+            buttonClassName="w-full md:w-auto"
           />
         }
         inlineHeaderContentMobile={true}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <StatCard title="Global Export Leaders" tooltipText="Leading pomegranate exporting countries by market share.">
+          <StatCard title="Global Export Leaders">
             <ul className="space-y-3">
               {TOP_EXPORTERS_DATA.map((item, index) => (
                 <li key={item.country}>
@@ -49,7 +50,7 @@ const OverviewSection: React.FC = () => {
             </ul>
           </StatCard>
 
-          <StatCard title="Global Import Leaders" tooltipText="Leading pomegranate importing countries by market share.">
+          <StatCard title="Global Import Leaders">
             <ul className="space-y-3">
               {TOP_IMPORTERS_DATA.map((item, index) => (
                 <li key={item.country}>
@@ -63,7 +64,7 @@ const OverviewSection: React.FC = () => {
             </ul>
           </StatCard>
 
-          <StatCard title="Year-over-Year Growth" isScrollable={true} tooltipText="Year-over-year percentage change in the global pomegranate market value.">
+          <StatCard title="Year-over-Year Growth" isScrollable={true}>
             <ul className="space-y-2">
               {YOY_GROWTH_DATA.map((item) => (
                 <li key={item.year} className="flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0 cursor-default">
@@ -80,7 +81,7 @@ const OverviewSection: React.FC = () => {
             <p className="text-xs text-gray-500 mt-auto pt-2">Source: Pomintel Analysis + Public Export Data</p>
           </StatCard>
           
-          <StatCard title="Trade Snapshot" tooltipText="Key trade metrics for the selected period.">
+          <StatCard title="Trade Snapshot">
             <div className="flex flex-col justify-center h-full">
               <ul className="space-y-4 text-sm">
                 <li className="flex justify-between items-center border-b border-gray-100 pb-2">

@@ -34,7 +34,7 @@ const MarketPriceTracker: React.FC = () => {
         <div className="flex items-center mb-2">
           <h3 className="text-xl font-semibold text-gray-800">Market Price Tracker</h3>
           <div className="ml-2">
-            <Tooltip content="Speculative data based on public sources. This data is estimated using public figures and market patterns, and auto-updates every 30-60 seconds." className="w-4 h-4" />
+            <Tooltip content="Speculative data based on public sources. This data is estimated using public figures and market patterns, and auto-updates every 30-60 seconds." className="w-4 h-4" position="bottom" />
           </div>
         </div>
         <p className="text-xs text-gray-600 mb-4">Speculative data based on public sources.</p>
