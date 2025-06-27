@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useMemo } from 'react';
 import SectionWrapper from '../../layout/SectionWrapper';
 import Dropdown from '../../ui/Dropdown';
@@ -121,13 +118,15 @@ const TradeDataSection: React.FC = () => {
             />
         </div>
         <div className="flex justify-center mb-4">
-            <Dropdown
-                options={TIME_RANGE_OPTIONS}
-                selectedValue={timeRange}
-                onSelect={(value) => setTimeRange(value as string)}
-                className="w-full max-w-xs"
-                buttonClassName="w-full"
-            />
+            <div className="w-full flex justify-start">
+                <Dropdown
+                    options={TIME_RANGE_OPTIONS}
+                    selectedValue={timeRange}
+                    onSelect={(value) => setTimeRange(value as string)}
+                    className="max-w-xs"
+                    buttonClassName="w-full"
+                />
+            </div>
         </div>
         <div className="flex justify-center space-x-3">
         <button 

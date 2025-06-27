@@ -29,8 +29,10 @@ const OverviewSection: React.FC = () => {
             selectedValue={timeRange}
             onSelect={(value) => setTimeRange(value as string)}
             label="Time Range:"
+            className="w-32"
           />
         }
+        inlineHeaderContentMobile={true}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <StatCard title="Global Export Leaders" tooltipText="Leading pomegranate exporting countries by market share.">
