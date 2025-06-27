@@ -50,27 +50,30 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children, className, positio
         {trigger}
       </button>
       {isOpen && (
-        position === 'top' ? (
+        <div>
+          {/* Desktop Tooltip */}
           <div
-            className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max max-w-xs max-w-[90vw] sm:max-w-xs px-3 py-2 bg-gray-800 text-white text-xs rounded-md shadow-lg z-20"
+            className={`hidden sm:block ${position === 'top' ? 'absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2' : 'absolute top-full left-0 right-0 mx-auto mt-2'} w-max max-w-xs px-3 py-2 bg-gray-800 text-white text-xs rounded-md shadow-lg z-20`}
             style={{ minWidth: '120px', maxWidth: '90vw' }}
             role="tooltip"
           >
             {content}
             {/* Arrow */}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-gray-800"></div>
+            {position === 'top' ? (
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-gray-800"></div>
+            ) : (
+              <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-b-4 border-b-gray-800"></div>
+            )}
           </div>
-        ) : (
+          {/* Mobile Tooltip: fixed, centered, always readable */}
           <div
-            className="absolute top-full left-0 right-0 mx-auto mt-2 w-max max-w-xs max-w-[90vw] sm:max-w-xs px-3 py-2 bg-gray-800 text-white text-xs rounded-md shadow-lg z-20"
+            className={`block sm:hidden fixed left-1/2 bottom-6 transform -translate-x-1/2 w-[90vw] max-w-xs px-4 py-3 bg-gray-800 text-white text-sm rounded-lg shadow-2xl z-[9999] border border-gray-700`}
             style={{ minWidth: '120px', maxWidth: '90vw' }}
             role="tooltip"
           >
             {content}
-            {/* Arrow */}
-            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-b-4 border-b-gray-800"></div>
           </div>
-        )
+        </div>
       )}
     </div>
   );
