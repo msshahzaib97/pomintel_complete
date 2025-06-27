@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({ navItems, activeSection, onNavLi
         <div className="flex items-center justify-between h-16">
           {/* Logo & App Name */}
           <div className="flex items-center">
-            <PomegranateLogo className="h-12 w-12 md:h-16 md:w-16" />
+            <PomegranateLogo className="h-12 w-12 md:h-20 md:w-20" />
           </div>
 
           {/* Desktop Navigation */}

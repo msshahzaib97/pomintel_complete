@@ -31,37 +31,99 @@ export const MARKET_PRICES_DATA: MarketPrice[] = [
   { country: 'Turkey', price: 10.10, previousPrice: 10.00, lastUpdate: '13 APR 2025' },
 ];
 
-export const TOP_EXPORTERS_DATA: ExporterImporterStat[] = [
-  { country: 'Turkey', marketShare: 25 },
-  { country: 'India', marketShare: 20 },
-  { country: 'USA', marketShare: 15 },
-  { country: 'Spain', marketShare: 12 },
-  { country: 'Peru', marketShare: 10 },
-];
+export const TOP_EXPORTERS_DATA: Record<string, ExporterImporterStat[]> = {
+  yearly: [
+    { country: 'Turkey', marketShare: 25 },
+    { country: 'India', marketShare: 20 },
+    { country: 'USA', marketShare: 15 },
+    { country: 'Spain', marketShare: 12 },
+    { country: 'Peru', marketShare: 10 },
+  ],
+  quarterly: [
+    { country: 'Turkey', marketShare: 22 },
+    { country: 'India', marketShare: 21 },
+    { country: 'USA', marketShare: 16 },
+    { country: 'Spain', marketShare: 13 },
+    { country: 'Peru', marketShare: 11 },
+  ],
+  monthly: [
+    { country: 'Turkey', marketShare: 20 },
+    { country: 'India', marketShare: 19 },
+    { country: 'USA', marketShare: 17 },
+    { country: 'Spain', marketShare: 14 },
+    { country: 'Peru', marketShare: 12 },
+  ],
+};
 
-export const TOP_IMPORTERS_DATA: ExporterImporterStat[] = [
-  { country: 'Germany', marketShare: 18 },
-  { country: 'Netherlands', marketShare: 15 },
-  { country: 'UK', marketShare: 12 },
-  { country: 'Russia', marketShare: 10 },
-  { country: 'UAE', marketShare: 9 },
-];
+export const TOP_IMPORTERS_DATA: Record<string, ExporterImporterStat[]> = {
+  yearly: [
+    { country: 'Germany', marketShare: 18 },
+    { country: 'Netherlands', marketShare: 15 },
+    { country: 'UK', marketShare: 12 },
+    { country: 'Russia', marketShare: 10 },
+    { country: 'UAE', marketShare: 9 },
+  ],
+  quarterly: [
+    { country: 'Germany', marketShare: 17 },
+    { country: 'Netherlands', marketShare: 16 },
+    { country: 'UK', marketShare: 13 },
+    { country: 'Russia', marketShare: 11 },
+    { country: 'UAE', marketShare: 10 },
+  ],
+  monthly: [
+    { country: 'Germany', marketShare: 16 },
+    { country: 'Netherlands', marketShare: 14 },
+    { country: 'UK', marketShare: 13 },
+    { country: 'Russia', marketShare: 12 },
+    { country: 'UAE', marketShare: 11 },
+  ],
+};
 
-export const YOY_GROWTH_DATA: YoYGrowthData[] = [
-  { year: '2023', growth: 5.2 },
-  { year: '2022', growth: -1.5 },
-  { year: '2021', growth: 8.0 },
-  { year: '2020', growth: 3.1 },
-  { year: '2019', growth: -0.5 },
-  { year: '2018', growth: 6.5 },
-];
+export const YOY_GROWTH_DATA: Record<string, YoYGrowthData[]> = {
+  yearly: [
+    { year: '2023', growth: 5.2 },
+    { year: '2022', growth: -1.5 },
+    { year: '2021', growth: 8.0 },
+    { year: '2020', growth: 3.1 },
+    { year: '2019', growth: -0.5 },
+    { year: '2018', growth: 6.5 },
+  ],
+  quarterly: [
+    { year: 'Q1 2024', growth: 2.1 },
+    { year: 'Q4 2023', growth: 1.5 },
+    { year: 'Q3 2023', growth: 2.8 },
+    { year: 'Q2 2023', growth: 0.9 },
+  ],
+  monthly: [
+    { year: 'Apr 2024', growth: 0.5 },
+    { year: 'Mar 2024', growth: 0.3 },
+    { year: 'Feb 2024', growth: 0.2 },
+    { year: 'Jan 2024', growth: 0.1 },
+  ],
+};
 
-export const TRADE_SNAPSHOT_DATA: TradeSnapshotData = {
-  topExporter: 'Peru',
-  topImporter: 'USA',
-  totalExportVolume: 5624,
-  totalImportVolume: 5712,
-  activeCountriesTracked: 8,
+export const TRADE_SNAPSHOT_DATA: Record<string, TradeSnapshotData> = {
+  yearly: {
+    topExporter: 'Peru',
+    topImporter: 'USA',
+    totalExportVolume: 5624,
+    totalImportVolume: 5712,
+    activeCountriesTracked: 8,
+  },
+  quarterly: {
+    topExporter: 'Turkey',
+    topImporter: 'Germany',
+    totalExportVolume: 1400,
+    totalImportVolume: 1500,
+    activeCountriesTracked: 7,
+  },
+  monthly: {
+    topExporter: 'India',
+    topImporter: 'Netherlands',
+    totalExportVolume: 400,
+    totalImportVolume: 420,
+    activeCountriesTracked: 6,
+  },
 };
 
 export const ARTICLES_DATA: Article[] = [

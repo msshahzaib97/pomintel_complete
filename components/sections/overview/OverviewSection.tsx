@@ -38,7 +38,7 @@ const OverviewSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <StatCard title="Global Export Leaders">
             <ul className="space-y-3">
-              {TOP_EXPORTERS_DATA.map((item, index) => (
+              {(TOP_EXPORTERS_DATA[timeRange] || []).map((item, index) => (
                 <li key={item.country}>
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-sm text-gray-700">{item.country}</span>
@@ -52,7 +52,7 @@ const OverviewSection: React.FC = () => {
 
           <StatCard title="Global Import Leaders">
             <ul className="space-y-3">
-              {TOP_IMPORTERS_DATA.map((item, index) => (
+              {(TOP_IMPORTERS_DATA[timeRange] || []).map((item, index) => (
                 <li key={item.country}>
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-sm text-gray-700">{item.country}</span>
@@ -66,7 +66,7 @@ const OverviewSection: React.FC = () => {
 
           <StatCard title="Year-over-Year Growth" isScrollable={true}>
             <ul className="space-y-2">
-              {YOY_GROWTH_DATA.map((item) => (
+              {(YOY_GROWTH_DATA[timeRange] || []).map((item) => (
                 <li key={item.year} className="flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0 cursor-default">
                   <span className="text-sm text-gray-700">{item.year}</span>
                   <div className="flex items-center">
@@ -86,23 +86,23 @@ const OverviewSection: React.FC = () => {
               <ul className="space-y-4 text-sm">
                 <li className="flex justify-between items-center border-b border-gray-100 pb-2">
                   <span className="text-gray-600">Top Exporter</span>
-                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA.topExporter}</span>
+                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA[timeRange]?.topExporter}</span>
                 </li>
                 <li className="flex justify-between items-center border-b border-gray-100 pb-2">
                   <span className="text-gray-600">Top Importer</span>
-                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA.topImporter}</span>
+                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA[timeRange]?.topImporter}</span>
                 </li>
                 <li className="flex justify-between items-center border-b border-gray-100 pb-2">
                   <span className="text-gray-600">Total Export Volume</span>
-                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA.totalExportVolume} thousand tons</span>
+                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA[timeRange]?.totalExportVolume} thousand tons</span>
                 </li>
                 <li className="flex justify-between items-center border-b border-gray-100 pb-2">
                   <span className="text-gray-600">Total Import Volume</span>
-                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA.totalImportVolume} thousand tons</span>
+                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA[timeRange]?.totalImportVolume} thousand tons</span>
                 </li>
                 <li className="flex justify-between items-center pt-2">
                   <span className="text-gray-600">Active Countries Tracked</span>
-                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA.activeCountriesTracked}</span>
+                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA[timeRange]?.activeCountriesTracked}</span>
                 </li>
               </ul>
             </div>
