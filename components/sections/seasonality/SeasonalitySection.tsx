@@ -3,7 +3,7 @@ import SectionWrapper from '../../layout/SectionWrapper';
 import Dropdown from '../../ui/Dropdown';
 import HarvestActivityChart from './HarvestActivityChart';
 import HarvestCalendar from './HarvestCalendar';
-import ProductionInsights from './ProductionInsights.tsx'; // Added .tsx extension
+import ProductionInsights from './ProductionInsights';
 import { HARVEST_ACTIVITY_CHART_DATA, ALL_COUNTRIES_OPTIONS, HARVEST_COUNTRY_COLORS } from '../../../constants';
 import { DropdownOption } from '../../../types';
 
