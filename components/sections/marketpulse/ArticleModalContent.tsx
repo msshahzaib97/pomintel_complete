@@ -17,7 +17,7 @@ const ArticleModalContent: React.FC<ArticleModalContentProps> = ({ article }) =>
             <svg width="96" height="96" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#e5e7eb" /><text x="12" y="16" textAnchor="middle" fontSize="12" fill="#9ca3af">No Image</text></svg>
           </div>
         ) : (
-          <img src={article.image} alt={article.title} className="w-full h-64 object-cover rounded-md" onError={() => setImgError(true)} />
+          <img src={article.image} alt={article.title} className="w-full h-full object-cover rounded-md" onError={() => setImgError(true)} />
         )}
         <span className="absolute top-2 left-2 bg-black text-white text-xs font-semibold px-2 py-1 rounded">
           {article.countryTag}
@@ -36,19 +36,6 @@ const ArticleModalContent: React.FC<ArticleModalContentProps> = ({ article }) =>
       <div className="prose prose-sm max-w-none whitespace-pre-line text-gray-700">
         {article.fullContent}
       </div>
-      {article.referenceUrl && (
-        <div className="mt-6 pt-4 border-t border-gray-200">
-            <a
-                href={article.referenceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-black transition-colors"
-            >
-                View Source
-                <ExternalLinkIcon className="w-4 h-4 ml-1.5" />
-            </a>
-        </div>
-      )}
     </div>
   );
 };
