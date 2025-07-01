@@ -77,6 +77,7 @@ const MarketPricesSection: React.FC = () => {
       id="market-prices"
       title="Market Prices"
       tooltipText="Detailed current market prices for pomegranates."
+      className="bg-white"
     >
       {/* Desktop Filters */}
       <div className="hidden md:flex justify-end items-center space-x-4 mb-6 -mt-16">

@@ -12,6 +12,8 @@ import FaqAndTermsModal from './components/sections/shared/FaqAndTermsModal';
 import { NAVIGATION_ITEMS, APP_NAME } from './constants';
 import { NavItem } from './types';
 import { QuestionMarkCircleIcon } from './components/IconComponents';
+import { StagewiseToolbar } from '@stagewise/toolbar-react';
+import { ReactPlugin } from '@stagewise-plugins/react';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>(NAVIGATION_ITEMS[0].id);
@@ -119,6 +121,10 @@ const App: React.FC = () => {
       >
         <QuestionMarkCircleIcon className="w-6 h-6" />
       </button>
+
+      {process.env.NODE_ENV === 'development' && (
+        <StagewiseToolbar config={{ plugins: [ReactPlugin] }} />
+      )}
     </div>
   );
 };
