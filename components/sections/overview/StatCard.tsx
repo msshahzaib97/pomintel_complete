@@ -12,7 +12,7 @@ interface StatCardProps {
 
 const StatCard: React.FC<StatCardProps> = ({ title, children, className = '', isScrollable = false, tooltipText }) => {
   return (
-    <div className={`bg-white p-6 rounded-lg shadow-md flex flex-col border border-gray-200 ${className}`}>
+    <div className={`bg-white p-6 rounded-xl shadow flex flex-col border border-gray-200 mt-0 ${className}`}>
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center">
             <h3 className="text-lg font-semibold text-gray-900">{title}</h3>

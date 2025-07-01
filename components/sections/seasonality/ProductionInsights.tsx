@@ -16,9 +16,9 @@ const ProductionInsights: React.FC = () => {
       </ul>
       <div>
         <h4 className="text-sm font-semibold text-gray-700 mb-2">Season Indicators Legend:</h4>
-        <ul className="flex flex-row gap-4 text-xs">
+        <ul className="flex flex-row flex-nowrap gap-4 text-xs">
           {SEASON_INDICATOR_LEGEND.map(indicator => (
-             <li key={indicator.name} className="flex items-center">
+             <li key={indicator.name} className="flex items-center whitespace-nowrap">
                 <span className={`w-3 h-3 rounded-full mr-2 ${indicator.color}`}></span>
                 <span className="text-gray-600">{indicator.name}</span>
              </li>

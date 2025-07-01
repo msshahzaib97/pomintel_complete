@@ -86,7 +86,6 @@ const MarketPricesTable: React.FC<MarketPricesTableProps> = ({ data }) => {
               >
                 <div className="flex items-center">
                   {col.label}
-                  {col.sortable && getSortIcon(col.key)}
                 </div>
               </th>
             ))}

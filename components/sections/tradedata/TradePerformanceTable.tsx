@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { TradePerformanceData } from '../../../types';
-import { ArrowUpShortIcon, ArrowDownShortIcon, SortIcon, SortAscIcon, SortDescIcon, DoubleArrowSortIcon } from '../../IconComponents';
+import { ArrowUpShortIcon, ArrowDownShortIcon } from '../../IconComponents';
 import Tooltip from '../../ui/Tooltip'; // Import Tooltip
 import { INITIAL_TRADE_PERFORMANCE_DATA } from '../../../constants';
 
@@ -75,10 +75,6 @@ const TradePerformanceTable: React.FC = () => {
     }
   };
   
-  const getSortIcon = (key: SortKey) => {
-    return <DoubleArrowSortIcon className="w-4 h-4 ml-1 text-gray-400" />;
-  };
-
   const columns: { key: SortKey; label: string; sortable: boolean, numeric?: boolean }[] = [
     { key: 'rank', label: 'Rank', sortable: true, numeric: true },
     { key: 'country', label: 'Country', sortable: true },
@@ -105,9 +101,8 @@ const TradePerformanceTable: React.FC = () => {
                   className={`px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ${col.sortable ? 'cursor-pointer hover:bg-gray-100' : ''}`}
                   onClick={() => col.sortable && handleSort(col.key)}
                 >
-                  <div className="flex items-center">
+                  <div>
                     {col.label}
-                    {col.sortable && getSortIcon(col.key)}
                   </div>
                 </th>
               ))}

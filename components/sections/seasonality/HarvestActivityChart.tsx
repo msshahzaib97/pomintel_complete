@@ -54,7 +54,7 @@ const HarvestActivityChart: React.FC<HarvestActivityChartProps> = ({ data, selec
           <Legend wrapperStyle={{ color: '#374151' }} /> {/* gray-700 */}
           {countries.map((country) => {
             if (selectedCountry === 'all' || selectedCountry.toLowerCase() === country.toLowerCase()) {
-              return <Bar key={country} dataKey={country} fill={HARVEST_COUNTRY_COLORS[country]} radius={isMobile ? [4, 0, 0, 4] : [4, 4, 0, 0]} />;
+              return <Bar key={country} dataKey={country} fill={HARVEST_COUNTRY_COLORS[country]} radius={isMobile ? [0, 8, 8, 0] : [8, 8, 0, 0]} />;
             }
             return null;
           })}
