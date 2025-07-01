@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ProductionInsight } from '../../../types';
 import { PRODUCTION_INSIGHTS_DATA, SEASON_INDICATOR_LEGEND } from '../../../constants';
@@ -19,9 +18,9 @@ const ProductionInsights: React.FC = () => {
         <h4 className="text-sm font-semibold text-gray-700 mb-2">Season Indicators Legend:</h4>
         <ul className="space-y-1 text-xs">
           {SEASON_INDICATOR_LEGEND.map(indicator => (
-             <li key={indicator.name} className="flex items-center">
-                <span className={`w-3 h-3 rounded-full mr-2 ${indicator.color}`}></span>
-                <span className="text-gray-600">{indicator.name}</span>
+             <li key={indicator.name} className="flex flex-col items-center">
+                <span className={`w-3 h-3 rounded-full mb-1 ${indicator.color}`}></span>
+                <span className="text-gray-600 text-center">{indicator.name}</span>
              </li>
           ))}
         </ul>

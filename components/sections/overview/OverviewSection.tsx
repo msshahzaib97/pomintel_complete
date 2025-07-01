@@ -94,11 +94,11 @@ const OverviewSection: React.FC = () => {
                 </li>
                 <li className="flex justify-between items-center border-b border-gray-100 pb-2">
                   <span className="text-gray-600">Total Export Volume</span>
-                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA[timeRange]?.totalExportVolume} thousand tons</span>
+                  <span className="font-semibold text-gray-800 whitespace-nowrap">{TRADE_SNAPSHOT_DATA[timeRange]?.totalExportVolume} thousand tons</span>
                 </li>
                 <li className="flex justify-between items-center border-b border-gray-100 pb-2">
                   <span className="text-gray-600">Total Import Volume</span>
-                  <span className="font-semibold text-gray-800">{TRADE_SNAPSHOT_DATA[timeRange]?.totalImportVolume} thousand tons</span>
+                  <span className="font-semibold text-gray-800 whitespace-nowrap">{TRADE_SNAPSHOT_DATA[timeRange]?.totalImportVolume} thousand tons</span>
                 </li>
                 <li className="flex justify-between items-center pt-2">
                   <span className="text-gray-600">Active Countries Tracked</span>
