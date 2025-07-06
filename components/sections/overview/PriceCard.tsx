@@ -12,7 +12,7 @@ const PriceCard: React.FC<PriceCardProps> = ({ data }) => {
   const isPositive = change >= 0;
 
   return (
-    <div className="bg-white p-4 rounded-xl w-64 mx-2 flex-shrink-0 marquee-item-wrapper mt-0 border border-black">
+    <div className="bg-white p-4 rounded-md w-64 mx-2 flex-shrink-0 marquee-item-wrapper mt-0 border border-black">
       <h3 className="text-sm font-semibold text-gray-900">{data.country} Pomegranates</h3>
       <p className="text-xs text-gray-500 mb-2">Last updated: {data.lastUpdate}</p>
       <div className="flex items-baseline mb-1">
