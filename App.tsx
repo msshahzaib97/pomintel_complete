@@ -86,12 +86,12 @@ const App: React.FC = () => {
         appName={APP_NAME}
         onOpenEarlyAccessModal={openEarlyAccessModal}
       />
-      <main className="flex-grow">
-        <div ref={el => { sectionRefs.current['overview'] = el; }}><OverviewSection /></div>
-        <div ref={el => { sectionRefs.current['market-pulse'] = el; }}><MarketPulseSection /></div>
-        <div ref={el => { sectionRefs.current['trade-data'] = el; }}><TradeDataSection /></div>
-        <div ref={el => { sectionRefs.current['market-prices'] = el; }}><MarketPricesSection /></div>
-        <div ref={el => { sectionRefs.current['seasonality'] = el; }}><SeasonalitySection /></div>
+      <main className="flex-grow bg-gray-100">
+        <div ref={el => { sectionRefs.current['overview'] = el; }} className="mb-8"><OverviewSection /></div>
+        <div ref={el => { sectionRefs.current['market-pulse'] = el; }} className="mb-8"><MarketPulseSection /></div>
+        <div ref={el => { sectionRefs.current['trade-data'] = el; }} className="mb-8"><TradeDataSection /></div>
+        <div ref={el => { sectionRefs.current['market-prices'] = el; }} className="mb-8"><MarketPricesSection /></div>
+        <div ref={el => { sectionRefs.current['seasonality'] = el; }} className="mb-16"><SeasonalitySection /></div>
       </main>
       <Footer />
 
