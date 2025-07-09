@@ -86,9 +86,9 @@ const TradePerformanceTable: React.FC = () => {
   ];
 
   return (
-    <div className="mt-8 bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+    <div className="mt-8 bg-white p-6 rounded-md border border-gray-300">
       <div className="flex items-center mb-4">
-        <h3 className="text-xl font-semibold text-gray-800">Trade Performance</h3>
+        <h3 className="text-xl font-semibold text-gray-700 px-3 py-2 rounded mb-4">Trade Performance</h3>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">

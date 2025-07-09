@@ -13,7 +13,7 @@ interface SectionWrapperProps {
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({ id, title, tooltipText, children, className = '', headerContent, inlineHeaderContentMobile = false }) => {
   return (
-    <section id={id} className={`py-12 md:py-16 bg-gray-100 ${className}`}>
+    <section id={id} className={`py-12 md:py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className={`mb-8 flex ${inlineHeaderContentMobile ? 'flex-row items-center justify-start flex-wrap' : 'flex-col'} md:flex-row md:justify-between md:items-center`}

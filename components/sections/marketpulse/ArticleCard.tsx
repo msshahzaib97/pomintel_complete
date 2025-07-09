@@ -10,10 +10,10 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
   const [imgError, setImgError] = useState(false);
   return (
     <button
-      className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 text-left w-full"
+      className="bg-white rounded-md overflow-hidden cursor-pointer transition-shadow duration-300 flex flex-col h-full border border-gray-300 text-left w-full"
       onClick={onClick}
     >
-      <div className="relative">
+      <div className="border border-gray-300 rounded-md overflow-hidden">
         {imgError ? (
           <div className="w-full h-48 flex items-center justify-center bg-gray-100">
             <svg width="64" height="64" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#e5e7eb" /><text x="12" y="16" textAnchor="middle" fontSize="10" fill="#9ca3af">No Image</text></svg>

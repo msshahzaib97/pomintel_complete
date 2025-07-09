@@ -23,7 +23,7 @@ const HarvestActivityChart: React.FC<HarvestActivityChartProps> = ({ data, selec
   }, []);
 
   return (
-    <div className="h-96 bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+    <div className="h-96 bg-white p-4 rounded-md border border-gray-300">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}

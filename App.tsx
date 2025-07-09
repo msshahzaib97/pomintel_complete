@@ -86,7 +86,7 @@ const App: React.FC = () => {
         appName={APP_NAME}
         onOpenEarlyAccessModal={openEarlyAccessModal}
       />
-      <main className="flex-grow bg-gray-100">
+      <main className="flex-grow bg-white">
         <div ref={el => { sectionRefs.current['overview'] = el; }} className="mb-8"><OverviewSection /></div>
         <div ref={el => { sectionRefs.current['market-pulse'] = el; }} className="mb-8"><MarketPulseSection /></div>
         <div ref={el => { sectionRefs.current['trade-data'] = el; }} className="mb-8"><TradeDataSection /></div>

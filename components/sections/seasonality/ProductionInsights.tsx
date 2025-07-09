@@ -4,7 +4,7 @@ import { PRODUCTION_INSIGHTS_DATA, SEASON_INDICATOR_LEGEND } from '../../../cons
 
 const ProductionInsights: React.FC = () => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+    <div className="bg-white p-6 rounded-md border border-gray-300">
       <h3 className="text-lg font-semibold text-gray-900 mb-4">Production Insights</h3>
       <ul className="space-y-2 mb-6">
         {PRODUCTION_INSIGHTS_DATA.map((insight) => (

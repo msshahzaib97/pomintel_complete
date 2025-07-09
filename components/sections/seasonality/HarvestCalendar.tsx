@@ -5,7 +5,7 @@ import { HARVEST_CALENDAR_DATA } from '../../../constants';
 
 const HarvestCalendar: React.FC = () => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+    <div className="bg-white p-6 rounded-md border border-gray-300">
       <h3 className="text-lg font-semibold text-gray-900 mb-4">Harvest Calendar</h3>
       <ul className="space-y-2">
         {HARVEST_CALENDAR_DATA.map((entry) => (

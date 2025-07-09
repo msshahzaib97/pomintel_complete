@@ -102,7 +102,7 @@ const TradeDataSection: React.FC = () => {
       id="trade-data"
       title="Trade Data"
       tooltipText="Detailed import/export volumes and performance metrics."
-      className="bg-gray-50" 
+      className="bg-gray-100" 
       headerContent={<div className="hidden md:flex items-center space-x-2 md:space-x-4">{desktopControls}</div>}
     >
       {/* Mobile Controls */}

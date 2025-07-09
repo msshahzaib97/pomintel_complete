@@ -45,7 +45,7 @@ const SeasonalitySection: React.FC = () => {
       id="seasonality"
       title="Seasonality"
       tooltipText="Pomegranate harvest schedules and production insights. Harvest activity is speculative and updated periodically."
-      className="bg-gray-50"
+      className="bg-gray-100"
       headerContent={
         <Dropdown
           options={countryOptionsForSeasonality}
