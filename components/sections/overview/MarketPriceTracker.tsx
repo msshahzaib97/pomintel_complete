@@ -29,10 +29,10 @@ const MarketPriceTracker: React.FC = () => {
   const duplicatedData = [...prices, ...prices]; // Duplicate for seamless loop
 
   return (
-    <div className="bg-white p-6 rounded-md border border-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-white p-6 border border-gray-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-10">
         <div className="flex items-center mb-2">
-          <h3 className="text-xl font-semibold text-gray-800">Market Price Tracker</h3>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Market Price Tracker</h2>
           <div className="ml-2">
             <Tooltip content="Speculative data based on public sources. This data is estimated using public figures and market patterns, and auto-updates every 30-60 seconds." className="w-4 h-4" position="bottom" />
           </div>
