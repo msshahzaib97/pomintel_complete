@@ -20,7 +20,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ id, title, tooltipText,
         >
           {/* Title, InfoIcon, and potentially inline mobile header content */}
           <div className={`flex items-center ${inlineHeaderContentMobile ? 'mr-auto' : ''} ${inlineHeaderContentMobile ? '' : 'mb-4'} md:mb-0`}>
-            <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">{title}</h2>
             {tooltipText && (
               <div className="ml-2 flex items-center">
                 <Tooltip content={tooltipText} className="w-4 h-4" />

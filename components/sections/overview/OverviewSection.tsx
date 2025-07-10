@@ -22,7 +22,7 @@ const OverviewSection: React.FC = () => {
         id="overview"
         title="Overview"
         tooltipText="Key pomegranate market indicators and statistics."
-        className="bg-gray-100 border border-gray-300 rounded-md" 
+        className="bg-gray-100 border border-gray-300" 
         headerContent={
           <Dropdown
             options={TIME_RANGE_OPTIONS}
